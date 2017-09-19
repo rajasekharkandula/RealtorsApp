@@ -27,7 +27,7 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-		window.open('http://xucorelms.com/nartesting', '_system');
+		window.open('http://xucorelms.com/nartesting', '_self');
         //this.receivedEvent('deviceready');
     },
 	
