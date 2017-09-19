@@ -41,6 +41,31 @@ var app = {
 
         console.log('Received Event: ' + id); */
     }
+	
+	//Push Notification
+	pushNotification:function(){
+		var push = PushNotification.init({ "android": {"senderID": "299917060497"},
+         "ios": {"alert": "true", "badge": "true", "sound": "true"}, "windows": {} } );
+
+		push.on('registration', function(data) {
+			// data.registrationId
+			localStorage.setItem('registrationId', data.registrationId);
+		});
+
+		push.on('notification', function(data) {
+			// data.message,
+			// data.title,
+			// data.count,
+			// data.sound,
+			// data.image,
+			// data.additionalData
+		});
+
+		push.on('error', function(e) {
+			// e.message
+		});
+	}
+	
 };
 
 app.initialize();

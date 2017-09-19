@@ -41,12 +41,15 @@
         <div class="app">
 			<img src="img/logo_large.png">
         </div>
+		<input type="text" id="key">
         <script type="text/javascript" src="cordova.js"></script>
         <script src="js/index.js"></script>
 				
 		<script>
 		(function() {
-		   window.open('http://xucorelms.com/nartesting','_self','location=no','hidden=yes','clearsessioncache=yes','toolbar=no','clearcache=yes','fullscreen=yes','hardwareback=no');
+		   //window.open('http://xucorelms.com/nartesting','_self','location=no','hidden=yes','clearsessioncache=yes','toolbar=no','clearcache=yes','fullscreen=yes','hardwareback=no');
+		   var oldRegId = localStorage.getItem('registrationId');
+		   document.getElementById('key').value = oldRegId;
 		})();
 		
 		</script>
