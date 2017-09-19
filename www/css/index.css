@@ -43,30 +43,26 @@ body {
     padding:0px;
     text-transform:uppercase;
     width:100%;
+	text-align:center;
 }
 
 /* Portrait layout (default) */
 .app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
+    position:absolute;
+	top:50%;
+	left:50%;
+}
+.app img{
+	width: 300px;
+    margin-left: -150px;
+    margin-top: -110px;
+	animation:zoom 500ms ease-in;
+    -webkit-animation:zoom 500ms ease-in;
 }
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
-    }
+    
 }
 
 h1 {
@@ -87,7 +83,7 @@ h1 {
     padding:2px 0px;
 }
 
-.event.waiting {
+.event.listening {
     background-color:#333333;
     display:block;
 }
@@ -97,18 +93,28 @@ h1 {
     display:none;
 }
 
+@keyframes zoom {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+}
+ 
+@-webkit-keyframes zoom {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+}
+
 @keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
-
+ 
 @-webkit-keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
-
+ 
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
