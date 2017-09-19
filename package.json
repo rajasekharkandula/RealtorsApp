@@ -17,7 +17,8 @@
     "cordova": {
         "plugins": {
             "cordova-plugin-whitelist": {},
-            "org.apache.cordova.inappbrowser": {}
+            "org.apache.cordova.inappbrowser": {},
+            "cordova-plugin-inappbrowser": {}
         },
         "platforms": [
             "browser"
