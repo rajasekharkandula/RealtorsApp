@@ -4,7 +4,7 @@
     <description>
         Realtors Development Testing App
     </description>
-    <author href="http://axinovate.com" email="info@axinovate.com">
+    <author email="info@axinovate.com" href="http://axinovate.com">
 		Axinovate Team
 	</author>
     <content src="index.html" />
@@ -24,5 +24,4 @@
     </platform>
     <engine name="browser" spec="^4.1.0" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
-	<plugin name="org.apache.cordova.inappbrowser" source="npm" />
 </widget>
