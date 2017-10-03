@@ -17,8 +17,6 @@
  * under the License.
  */
 
-var url = 'http://www.narindiarealtors.com';
- 
 var app = {
     // Application Constructor
     initialize: function() {
@@ -44,7 +42,10 @@ var app = {
         console.log('calling push init');
         var push = PushNotification.init({
             "android": {
-                "senderID": "274354408944"
+                "senderID": "274354408944",
+				"sound": true,
+                "vibration": true,
+                "badge": true
             },
             "browser": {},
             "ios": {
@@ -67,12 +68,14 @@ var app = {
             }
 			
 			//Saving registraton ID
-			var saveXhttp = new XMLHttpRequest();
+			/* var saveXhttp = new XMLHttpRequest();
 			saveXhttp.open("GET", url+'/user/save_push_id/'+data.registrationId, true);
-			saveXhttp.send();
+			saveXhttp.send(); */
+			
+			var url = 'http://www.narindiarealtors.com/user/save_push_id/'+data.registrationId;
 			
 			//Calling Website
-			app.website();
+			app.website(url);
 			
         });
 
@@ -90,7 +93,7 @@ var app = {
             );
        });
     },
-	website: function() {
+	website: function(url) {
 		window.open(url,'_system','location=no','hidden=yes','clearsessioncache=yes','toolbar=no','clearcache=yes','fullscreen=yes');
 	}
 };
