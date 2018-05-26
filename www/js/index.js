@@ -72,7 +72,7 @@ var app = {
 			saveXhttp.open("GET", url+'/user/save_push_id/'+data.registrationId, true);
 			saveXhttp.send(); */
 			
-			var url = 'http://www.narindia.in/user/save_push_id/'+data.registrationId;
+			var url = 'http://narindia.com/user/save_push_id/'+data.registrationId;
 			
 			//Calling Website
 			app.website(url);
