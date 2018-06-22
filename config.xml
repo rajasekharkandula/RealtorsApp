@@ -4,8 +4,8 @@
     <description>
         National Assosciation of Realtors - India
     </description>
-    <author email="info@axinovate.com" href="http://axinovate.com">
-        Axinovate Team
+    <author email="technology@narindia.com" href="http://narindia.org">
+        NAR India Team
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
