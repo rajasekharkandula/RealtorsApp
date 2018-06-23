@@ -2,7 +2,7 @@
 <widget id="com.narindia.app" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>NAR India</name>
     <description>
-        National Assosciation of Realtors - India
+        National Association of Realtors - India
     </description>
     <author email="technology@narindia.com" href="http://narindia.org">
         NAR India Team
