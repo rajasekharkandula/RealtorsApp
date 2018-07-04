@@ -14,9 +14,6 @@
     <preference name="StatusBarBackgroundColor" value="#ee6e73" />
     <preference name="StatusBarStyle" value="blacktranslucent" />
     <icon src="www/img/logo.png" />
-	<icon src="www/img/logo_60_60.png" width="60" height="60" />
-   	<icon src="www/img/logo_120_120.png" width="120" height="120" />
-	<icon src="www/img/logo_152_152.png" width="152" height="152" />
 
     <platform name="android">
         <icon density="ldpi" src="www/img/logo.png" />
