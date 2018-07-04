@@ -13,8 +13,7 @@
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#ee6e73" />
     <preference name="StatusBarStyle" value="blacktranslucent" />
-    <icon src="www/img/logo.png" />
-
+    
     <platform name="android">
         <icon density="ldpi" src="www/img/logo.png" />
         <icon density="mdpi" src="www/img/logo.png" />
