@@ -34,9 +34,14 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        console.log('Received Device Ready Event');
-        console.log('calling setup push');
-        app.setupPush();        
+		var ntwk = app.checkConnection();
+		if (ntwk) {
+			console.log('Received Device Ready Event');
+			console.log('calling setup push');
+			app.setupPush(); 
+		}else{
+			app.website('no-network.html');
+		}       
     },
     setupPush: function() {
         console.log('calling push init');
@@ -95,5 +100,12 @@ var app = {
     },
 	website: function(url) {
 		window.open(url,'_system','location=no','hidden=yes','clearsessioncache=yes','toolbar=no','clearcache=yes','fullscreen=yes');
+	},
+	checkConnection:function(){
+		if( !navigator.network ){
+			navigator.network = window.top.navigator.network;
+		}
+		return ( (navigator.network.connection.type === "none" || navigator.network.connection.type === null || 
+			navigator.network.connection.type === "unknown" ) ? false : true );
 	}
 };
