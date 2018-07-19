@@ -34,15 +34,19 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        console.log('Received Device Ready Event');
-        console.log('calling setup push');
-        app.setupPush();        
+		if (navigator.network.connection.type == Connection.NONE) {			
+			app.website('no-network.html');
+		}else{
+			console.log('Received Device Ready Event');
+			console.log('calling setup push');
+			app.setupPush(); 
+		}       
     },
     setupPush: function() {
         console.log('calling push init');
         var push = PushNotification.init({
             "android": {
-                "senderID": "274354408944",
+                "senderID": "94027929172",
 				"sound": true,
                 "vibration": true,
                 "badge": true
@@ -72,7 +76,7 @@ var app = {
 			saveXhttp.open("GET", url+'/user/save_push_id/'+data.registrationId, true);
 			saveXhttp.send(); */
 			
-			var url = 'http://www.narindiarealtors.com/user/save_push_id/'+data.registrationId;
+			var url = 'http://narindia.com/user/save_push_id/'+data.registrationId;
 			
 			//Calling Website
 			app.website(url);
